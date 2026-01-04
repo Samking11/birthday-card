@@ -1,0 +1,15 @@
+function e(e){document.title=e.title,document.body.innerHTML=e.body,document.body.classList.add("page-404")}let t={title:"Come Back Later...",body:`<br />
+    <h1>Hi, you come to early</h1>
+    <br /><br /><br />
+    <p>
+        I know this page is very interesting for you, especially for your special day but.<br />
+        You need to be patience until the time has come, right ?
+    </p>`},o={title:"See you next time...",body:`<br />
+    <h1>The party was over</h1>
+    <br /><br /><br />
+    <p>
+        Yes, my gift for you is kinda simple, cheap, and weird ? &#128534<br>
+        B-but. It's only for you. &#128150
+    </p>
+`},l=document.querySelector(".btn"),s=document.querySelector(".darkroom"),i=document.querySelector(".giftroom"),a=document.querySelector(".hallway"),n=document.querySelector(".empty-room"),r=document.querySelector(".flash"),c=document.querySelectorAll(".bb-text"),d=document.querySelectorAll(".gift-text"),u=document.querySelectorAll(".hall-text"),y=document.querySelectorAll(".room-text"),m=document.querySelector(".btn-ref"),p=document.querySelectorAll(".frame"),f=document.querySelector(".scroll"),L=document.querySelector(".text"),b=document.querySelector(".switch-aud"),S=document.querySelector(".blast-aud"),h=document.querySelector(".door-aud"),T=document.querySelector(".haunt-aud"),q=document.querySelector(".hbd-aud"),g=e=>{for(let t=0;t<e.length;t++)setTimeout(()=>{e[t].classList.add("read"),t===e.length-1&&(l.style.display="inline-block",m.style.display="block")},5e3*t)},k=e=>{e.classList.add("fade-in"),e.style.opacity="0",l.style.display="none",m.style.display="none"};{let w,A,I=(w=new Date("2026-01-04T00:00").getTime(),(A=Date.now())<w?"IS_EARLY":A>w+864e5?"IS_LATE":"ON_TIME");"IS_EARLY"===I&&e(t),"IS_LATE"===I&&e(o),"ON_TIME"===I&&(m.innerHTML="Click the Light Bulb.",g(c),l.addEventListener("click",function(){if(l.classList.contains("switch"))b.play(),k(s),m.innerHTML="Click the Door",setTimeout(function(){l.classList.add("door-out"),l.classList.remove("switch"),s.style.display="none",g(y)},4e3);else if(l.classList.contains("door-out"))h.play(),k(n),setTimeout(function(){T.play(),T.loop=!0,l.classList.add("door-in"),l.classList.remove("door-out"),n.style.display="none",g(u)},4e3);else if(l.classList.contains("door-in"))h.play(),k(a),m.innerHTML="Click the Gift",setTimeout(function(){l.classList.add("gift"),l.classList.remove("door-in"),a.style.display="none",g(d)},4e3);else if(l.classList.contains("gift")){T.pause(),S.play(),i.style.display="none",k(r),q.loop=!0,q.play();let e=parseInt(getComputedStyle(document.documentElement).getPropertyValue("--readTime"))+5;p[1].style.display="flex",setTimeout(()=>{p[1].classList.add("appear"),p[1].style.opacity="1",L.classList.add("move-up")},1500),setTimeout(()=>{L.style.transform="translateY(-100%)",r.style.display="none"},5e3),setTimeout(()=>{f.classList.add("fade-in"),f.style.opacity="0"},1e3*e),setTimeout(()=>{p[1].style.display="none",p[0].style.display="flex",p[0].classList.add("appear"),p[0].style.opacity="1"},(e+3)*1e3)}}))}
+//# sourceMappingURL=Happy-Birthday-Card.7473f74d.js.map
